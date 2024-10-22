@@ -69,6 +69,7 @@
     </style>
     <script src="libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="libs/layer/2.3/layer.js"></script>
+    <script src="libs/creditCode.js"></script>
     <script type="text/javascript">
         function getIdNo() {
             var coefficientArray = ["7", "9", "10", "5", "8", "4", "2", "1", "6", "3", "7", "9", "10", "5", "8", "4", "2"]; // 加权因子
@@ -195,7 +196,7 @@
             for (var i = 1; i <= 2000; i++) {
                 trs = trs + '<tr><td>' + i + '</td><td><span class="clipboard">' + getName() + '</span></td><td> 手机号：<span class="clipboard">' + getMoble() + 
 			'</span><br/>身份证：<span class="clipboard">' + getIdNo() + '</span><br/>银行卡：<span class="clipboard">' + getBankAccount() 
-			+ '</span><br/>社会统一信用代码：<span class="clipboard">' + getBankAccount() + '</span></td></tr>';
+			+ '</span><br/>社会统一信用代码：<span class="clipboard">' + generatorCreditCode() + '</span></td></tr>';
             }
             trs = '<table>' + trs + '</table>';
             document.getElementById("list").innerHTML = trs;
